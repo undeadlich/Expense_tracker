@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+# An example controller showing a sample home page
+GET     /home                        controllers.HomeController.home
+GET    /getExpenses         controllers.ExpenseController.getExpenses
+GET     /expense/:id        controllers.ExpenseController.getExpenseDetails(id: Long)
+# An example controller showing how to use dependency injection
+
+POST    /createExpense   controllers.ExpenseController.create()
+POST    /signup         controllers.AuthController.signup()
+POST    /login          controllers.AuthController.login()
+POST    /logout          controllers.AuthController.logout()
+POST  /refresh         controllers.AuthController.refresh()
+
+PUT    /editExpense/:id   controllers.ExpenseController.edit(id : Long)
+
+DELETE    /deleteExpense/:id   controllers.ExpenseController.delete(id : Long)
+
+

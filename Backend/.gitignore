@@ -1,0 +1,8 @@
+target/
+logs/
+RUNNING_PID
+.idea/
+.bsp/
+out/
+.DS_Store
+conf/application.conf
